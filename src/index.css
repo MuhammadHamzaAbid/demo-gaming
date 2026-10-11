@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-midnight: #060608;
+    --color-electric: #FF0033;
+    --color-glow: #FF0033;
+    --color-rog-red: #FF0033;
+    --color-rog-white: #FFFFFF;
+    --color-rog-black: #060608;
+  }
+
+  html {
+    background-color: #060608;
+    color: #FFFFFF;
+    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Orbitron', system-ui, sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Custom dark and red ROG scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060608;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #251218;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 0, 51, 0.3);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF0033;
+    box-shadow: 0 0 10px rgba(255, 0, 51, 0.6);
+  }
+
+  /* Browser surface polish */
+  input, textarea, select {
+    caret-color: #FF0033;
+  }
+
+  /* Tabular numerals for prices, stats, countdowns */
+  .font-mono, [class*="tabular"] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Consistent focus-visible ring */
+  :focus-visible {
+    outline: 2px solid #FF0033;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* ROG Crimson Glow effects */
+  .text-glow {
+    text-shadow: 0 0 14px rgba(255, 0, 51, 0.75), 0 0 28px rgba(230, 0, 38, 0.45);
+  }
+
+  .text-glow-white {
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+  }
+  
+  .border-glow {
+    border-color: rgba(255, 0, 51, 0.5);
+    box-shadow: 0 0 16px rgba(255, 0, 51, 0.3);
+  }
+
+  .shadow-neon-red {
+    box-shadow: 0 0 22px -2px rgba(255, 0, 51, 0.55);
+  }
+
+  /* Aliases for backwards-compatibility */
+  .shadow-neon-blue {
+    box-shadow: 0 0 22px -2px rgba(255, 0, 51, 0.55);
+  }
+
+  .shadow-glow-cyan {
+    box-shadow: 0 0 26px -2px rgba(255, 0, 51, 0.55);
+  }
+
+  .bg-radial-glow {
+    background: radial-gradient(circle at 50% 0%, rgba(255, 0, 51, 0.18) 0%, rgba(6, 6, 8, 0) 70%);
+  }
+
+
+
+  /* Cybernetic diagonal cut corner */
+  .cyber-cut {
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  }
+
+  .cyber-cut-tr {
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  }
+}
